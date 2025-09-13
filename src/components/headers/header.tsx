@@ -1,9 +1,11 @@
 import Image from 'next/image';
-import { Input } from '../ui/input';
-import { Search, ShoppingBag, ShoppingCart, User } from 'lucide-react';
+
 import { SearchInput } from '../search-input';
 
-export function HomeHeader() {
+import { ShoppingCart, User } from 'lucide-react';
+import { NavLink } from '../nav-link/nav-link';
+
+export function Header() {
 	return (
 		<header className="mx-auto flex w-full max-w-[1440px] items-center justify-between p-4">
 			<div className="flex items-center">
@@ -14,11 +16,7 @@ export function HomeHeader() {
 				</div>
 			</div>
 
-			<nav className="space-x-4">
-				<span>Categoria</span>
-				<span>Promoções</span>
-				<span>Novidades</span>
-			</nav>
+			<NavLink />
 
 			<SearchInput />
 
